@@ -53,8 +53,11 @@ body{
 }
 
 .navbar-toggler{
-    background-color: grey;
+    background-color: grey !important;
+    
+
 }
+
 
 .fa-snowflake{
     color: var(--main-color);
@@ -128,6 +131,15 @@ body{
 
 }
 
+#top_layer{
+    font-size: 1.5rem;
+    margin-bottom: 4rem;
+    background: #161d22;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 3rem;
+
+}
 
 /* footer  */
 
@@ -179,7 +191,7 @@ footer p {
 .temp_info{
     justify-content: center;
     text-align: center;
-    margin: 6rem 15rem;
+    margin: 3rem 15rem;
     padding: 5rem 0rem;
     /* position: absolute;
     left: 30%; */
@@ -192,7 +204,14 @@ footer p {
 #temp{
     font-size: 3.5rem;
 }
+#city_output{
+    font-size: 2rem;
+}
 /* responsive */
+
+.hide_class{
+    display: none;
+}
 
 @media (max-width:768px){
     .main_header_left{

@@ -24,13 +24,13 @@
 
                 <div class="temp_info">
                     <div id="top_layer">
-                        <p id="day">Tuesday</p>
+                        <p id="day">Thursday</p>
                         <p id="date">17 Aug</p>
                     </div>
                     <div class="main_layer">
-                        <p id="city_name">Get you output here</p>
+                        <p id="city_output">Get you output here</p>
                         <div class="middle_class hide_class">
-                            <p id="temp"><span>0</span> <sup>o</sup>C</p>
+                            <p id="temp"><span id="temp_status">0</span> <sup>o</sup>C</p>
                            
                         </div>
 
@@ -46,6 +46,53 @@
     {{>footer}}
 
     <script src="js/main.js"></script>
+    <script>
+        const getday = () =>{
+            let weekDay = new Array(7);
+            weekDay[0] = "Monday";
+            weekDay[1] = "Tuesday";
+            weekDay[2] = "Wednesday";
+            weekDay[3] = "Thursday";
+            weekDay[4] = "Friday";
+            weekDay[5] = "Saturday";
+            weekDay[6] = "Sunday";
+
+            let currentTime = new Date();
+            let currentDay = weekDay[currentTime.getDay()];
+            console.log(currentDay)
+            let day = document.getElementById('day');
+            day.innerText = currentDay;
+        }
+        getday();
+
+        const getCurrentDate =()=>{
+            let months = new Array(13);
+            months[1] = "Jan";
+            months[2] = "Feb";
+            months[3] = "Mar";
+            months[4] = "April";
+            months[5] = "May";
+            months[6] = "June";
+            months[7] = "July";
+            months[8] = "Aug";
+            months[9] = "Sept";
+            months[10] = "Oct";
+            months[11] = "Nov";
+            months[12] = "Dec";
+           
+           let time = new Date();
+           let monthDay = months[time.getMonth() +1]
+           {{!-- console.log(monthDay); --}}
+           let todaydate = time.getDate();
+           {{!-- console.log(todaydate); --}}
+
+           let month = document.getElementById('date');
+           month.innerText = `${todaydate} ${monthDay}`
+
+        }
+        getCurrentDate();
+    </script>
+    
 </body>
 
 </html>
