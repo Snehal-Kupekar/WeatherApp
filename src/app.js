@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const hbs = require('hbs')
 //to run on your ip address
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 5000;
 const path = require("path")
 
 
@@ -12,7 +12,7 @@ const path = require("path")
   const template_path = path.join(__dirname , "../templates/views");
   const partial_path = path.join(__dirname , "../templates/partial")
 
- console.log(stacticPath)
+//  console.log(stacticPath)
 app.use(express.static(stacticPath))
 
 
@@ -42,5 +42,5 @@ app.get("*" , (req,res)=>{
 })
 
 app.listen(port,()=>{
-    console.log("Listening to the port 8000")
+    console.log("Listening to the port 5000")
 })
