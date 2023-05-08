@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "name": "memories-album",
+    "name": "weather-app",
     "builds": [
        { "src": "app.js", "use": "@vercel/node" }
     ],
