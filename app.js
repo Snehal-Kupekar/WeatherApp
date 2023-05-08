@@ -8,9 +8,9 @@ const path = require("path")
 
 
 //public static path  
-  const stacticPath = path.join(__dirname , "../public");
-  const template_path = path.join(__dirname , "../templates/views");
-  const partial_path = path.join(__dirname , "../templates/partial")
+  const stacticPath = path.join(__dirname , "./public");
+  const template_path = path.join(__dirname , "./templates/views");
+  const partial_path = path.join(__dirname , "./templates/partial")
 
 //  console.log(stacticPath)
 app.use(express.static(stacticPath))
